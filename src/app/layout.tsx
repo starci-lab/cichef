@@ -2,14 +2,15 @@ import type { Metadata } from "next"
 import React, { PropsWithChildren } from "react"
 import "./globals.css"
 import { WrappedLayout } from "./WrappedLayout"
-import { Open_Sans } from "next/font/google"
+import { Lato } from "next/font/google"
 
 export const metadata: Metadata = {
     title: "CiChef",
     description: "",
 }
 
-const font = Open_Sans({
+const font = Lato({
+    weight: "700",
     subsets: ["latin"],
 })
 

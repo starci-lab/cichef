@@ -12,6 +12,7 @@ const config: Config = {
         extend: {
             colors: {
                 background: "var(--background)",
+                text: "rgb(17, 24, 28)",
                 bg1: "#31E9CF",
                 bg2: "#020706",
                 bg3: "#999999",
@@ -23,12 +24,12 @@ const config: Config = {
         themes: {
             light: {
                 colors: {
-                    primary: "#4DCB8E"
+                    primary: "#00FFD7"
                 }
             },
             dark: {
                 colors: {
-                    primary: "#4DCB8E",
+                    primary: "#00FFD7",
                 }
             }
         }

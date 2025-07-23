@@ -9,7 +9,25 @@ body {
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .gradient-border-mask {
+    position: relative;
+    padding: 2px;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #fefdf6 50%, #00f7e6 100%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  .gradient-border-mask .inner-content {
+    position: relative;
+    z-index: 10; /* Đảm bảo nằm trên lớp mask */
+    border-radius: inherit;
+    background-color: transparent; /* hoặc rgba nếu muốn glass effect */
   }
 }
