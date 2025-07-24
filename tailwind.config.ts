@@ -29,8 +29,8 @@ const config: Config = {
                 text: "rgb(17, 24, 28)",
                 secondary2: "#6589D1",
                 secondary3: "#FF23AB",
-                primary2: "#006656",
-                primaryFrom: "#D9D9D900"
+                primary2: "hsl(var(--tw-color-primary2) / <alpha-value>)",
+                primaryFrom: "hsl(var(--tw-color-primaryFrom) / <alpha-value>)",
             },
         },
     },

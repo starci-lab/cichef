@@ -1,6 +1,6 @@
 import { Lato } from "next/font/google"
 
 export const latoFont = Lato({
-    weight: "700",
+    weight: "400",
     subsets: ["latin"],
 })

@@ -12,7 +12,7 @@ export interface TitleProps {
 }
 
 const titleTv = tv({
-    base: "text-[36px] md:text-[48px]",
+    base: "text-[30px] md:text-[40px]",
     variants: {
         variant: {
             default: "",

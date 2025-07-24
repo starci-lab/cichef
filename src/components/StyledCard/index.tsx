@@ -54,7 +54,7 @@ const cardTv = tv({
         variant: {
             variant1: {
                 container: "gradient-border-white-primary rounded-medium p-0.5 overflow-hidden backdrop-blur-sm",
-                inner: "p-4",
+                inner: "p-0",
             },
             variant2: {
                 container: "gradient-border-3colors rounded-medium p-0.5 overflow-hidden shadow-lg shadow-white/30",

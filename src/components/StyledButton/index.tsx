@@ -7,6 +7,7 @@ export const StyledButton = ({ variant, className, ...rest }: ButtonProps) => {
         <Button
             variant={variant}
             className={clsx(
+                "font-bold",
                 (!variant || variant === "solid") && 
                 "bg-gradient-to-r from-white to-primary text-text",
                 className
