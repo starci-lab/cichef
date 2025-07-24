@@ -8,6 +8,9 @@ import {
     StyledCard,
     StyledTabs,
     Title,
+    ProcessStepCard,
+    Chef,
+    Divider,
 } from "@/components"
 import { CardBody, Spacer } from "@heroui/react"
 
@@ -35,39 +38,54 @@ const Page = () => {
                 activeKey="tab1"
                 onTabChange={() => {}}
             />
-            <Spacer y={6}/>
+            <Spacer y={6} />
             <div className="grid grid-cols-3 gap-4">
                 <StyledCard variant="variant2">
-                    <CardBody>
-                    213
-                    </CardBody>
+                    <CardBody>213</CardBody>
                 </StyledCard>
                 <StyledCard variant="variant2" crop={Crop.Cucumber}>
-                    <CardBody>
-                    213
-                    </CardBody>
+                    <CardBody>213</CardBody>
                 </StyledCard>
                 <StyledCard variant="variant2" crop={Crop.Eggplant}>
-                    <CardBody>
-                    213
-                    </CardBody>
+                    <CardBody>213</CardBody>
                 </StyledCard>
                 <StyledCard variant="variant2" crop={Crop.Parsnip}>
-                    <CardBody>
-                    213
-                    </CardBody>
+                    <CardBody>213</CardBody>
                 </StyledCard>
                 <StyledCard variant="variant2" crop={Crop.Squash}>
-                    <CardBody>
-                        213
-                    </CardBody>
+                    <CardBody>213</CardBody>
                 </StyledCard>
                 <StyledCard variant="variant2" crop={Crop.BellPepper}>
-                    <CardBody>
-                        213
-                    </CardBody>
+                    <CardBody>213</CardBody>
                 </StyledCard>
             </div>
+            <ProcessStepCard
+                title="Step 1"
+                subTitle="Subtitle 1"
+                descriptions={
+                    [
+                        { key: "Description 1", value: "Description 1" },
+                        { key: "Description 2", value: "Description 2" },
+                        { key: "Description 3", value: "Description 3" },
+                    ]
+                }
+                image="https://via.placeholder.com/150"
+            />
+            <ProcessStepCard
+                title="Step 1"
+                subTitle="Subtitle 1"
+                leftToRight={false}
+                chef={Chef.Pose2}
+                descriptions={
+                    [
+                        { key: "Description 1", value: "Description 1" },
+                        { key: "Description 2", value: "Description 2" },
+                        { key: "Description 3", value: "Description 3" },
+                    ]
+                }
+                divider={Divider.Pallete2}
+                image="https://via.placeholder.com/150"
+            />
         </div>
     )
 }

@@ -81,7 +81,7 @@ export const StyledCard = ({
                 <div className="absolute top-0 left-1/2 w-full h-full transform -translate-x-1/2 -translate-y-[60%] z-50 flex items-center justify-center">
                     <Image removeWrapper src={cropMap[crop].url} alt={cropMap[crop].name} style={{
                         scale: 0.3
-                    }}/>
+                    }} className="w-fit h-fit min-w-fit min-h-fit"/>
                 </div>
                 <Card className={clsx(container())} {...rest}>
                     <div className={inner()}>{children}</div>

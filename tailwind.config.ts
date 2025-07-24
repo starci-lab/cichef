@@ -11,11 +11,21 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            keyframes: {
+                bounceY: {
+                    "0%, 100%": { transform: "translateY(0%) scale(0.75)" },
+                    "50%": { transform: "translateY(-10%) scale(0.75)" },
+                },
+            },
+            animation: {
+                bounceY: "bounceY 1.5s ease-in-out infinite",
+            },        
             colors: {
-                background: "var(--background)",
                 text: "rgb(17, 24, 28)",
                 secondary2: "#6589D1",
                 secondary3: "#FF23AB",
+                primary2: "#006656",
+                primaryFrom: "#D9D9D900"
             },
         },
     },
