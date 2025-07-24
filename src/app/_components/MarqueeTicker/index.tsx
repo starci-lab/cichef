@@ -8,25 +8,43 @@ const images = [
         src: "/tech/aptos.svg",
         alt: "aptos",
         key: "aptos",
-        className: "h-12",
+        className: "h-8",
     },
     {
         src: "/tech/sui.svg",
         alt: "sui",
         key: "aptos",
-        className: "h-16",
+        className: "h-10",
     },
     {
         src: "/tech/solana.svg",
         alt: "solana",
         key: "solana",
-        className: "h-[44px]",
+        className: "h-8",
+    },
+    {
+        src: "/tech/monad.svg",
+        alt: "monad",
+        key: "monad",
+        className: "h-8",
+    },
+    {
+        src: "/tech/polygon.svg",
+        alt: "polygon",
+        key: "polygon",
+        className: "h-10",
+    },
+    {
+        src: "/tech/bnb.svg",
+        alt: "bnb",
+        key: "bnb",
+        className: "h-10",
     },
     {
         src: "/tech/ethereum.svg",
         alt: "ethereum",
         key: "ethereum",
-        className: "h-20",
+        className: "h-16",
     },
 ]
 
