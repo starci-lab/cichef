@@ -1,3 +1,5 @@
 export * from "./StyledButton"
 export * from "./Logo"
 export * from "./StyledCard"
+export * from "./Title"
+export * from "./StyledTabs"

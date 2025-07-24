@@ -8,7 +8,7 @@ export const StyledButton = ({ variant, className, ...rest }: ButtonProps) => {
             variant={variant}
             className={clsx(
                 (!variant || variant === "solid") && 
-                "bg-gradient-to-r from-white to-primary hover:brightness-110 text-text",
+                "bg-gradient-to-r from-white to-primary text-text",
                 className
             )}
             {...rest}

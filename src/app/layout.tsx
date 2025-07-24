@@ -2,17 +2,12 @@ import type { Metadata } from "next"
 import React, { PropsWithChildren } from "react"
 import "./globals.css"
 import { WrappedLayout } from "./WrappedLayout"
-import { Lato } from "next/font/google"
+import { latoFont } from "@/fonts"
 
 export const metadata: Metadata = {
     title: "CiChef",
     description: "",
 }
-
-const font = Lato({
-    weight: "700",
-    subsets: ["latin"],
-})
 
 const Layout = ({
     children,
@@ -20,7 +15,7 @@ const Layout = ({
     return (
         <html lang="en">
             <body
-                className={`${font.className} antialiased`}
+                className={`${latoFont.className} antialiased`}
             >
                 <WrappedLayout>{children}</WrappedLayout>
             </body>
