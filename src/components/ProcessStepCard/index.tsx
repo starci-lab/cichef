@@ -107,13 +107,13 @@ export const ProcessStepCard = ({
             <div
                 className={clsx(
                     classNames?.container,
-                    "flex gap-12 items-end",
+                    "flex gap-12 items-stretch",
                     "bg-gradient-to-r p-6",
                     {
                         "rounded-r-full pr-32 from-primaryFrom/0 to-primary/50": leftToRight,
                         "rounded-l-full pl-32 from-primary/50 to-primaryFrom/0": !leftToRight,
                         "flex-row-reverse": !leftToRight,
-                        "!rounded-none !p-6 w-full !gap-6": isMobile,
+                        "!rounded-none !p-6 w-full !gap-6 !items-end": isMobile,
                     }
                 )}
             >

@@ -11,6 +11,7 @@ import {
     ProcessStepCard,
     Chef,
     Divider,
+    EllipticalCard,
 } from "@/components"
 import { CardBody, Spacer } from "@heroui/react"
 
@@ -86,6 +87,7 @@ const Page = () => {
                 divider={Divider.Pallete2}
                 image="https://via.placeholder.com/150"
             />
+            <EllipticalCard />
         </div>
     )
 }

@@ -17,6 +17,11 @@ const config: Config = {
                     "50%": { transform: "translateY(-10%) scale(0.75)" },
                 },
             },
+            backgroundImage: {
+                "chip-1": "linear-gradient(to right, rgba(211,0,204,0.75), rgba(0,169,143,0.75), rgba(0,53,44,0.75))",
+                "chip-2": "linear-gradient(to right, rgba(0,51,205,0.75), rgba(0,169,143,0.75), rgba(0,53,44,0.75))",
+                "chip-3": "linear-gradient(to right, rgba(186,199,0,0.75), rgba(0,169,143,0.75), rgba(0,53,44,0.75))",
+            },
             animation: {
                 bounceY: "bounceY 1.5s ease-in-out infinite",
             },        
