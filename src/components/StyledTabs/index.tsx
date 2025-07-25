@@ -12,8 +12,8 @@ export interface StyledTab {
 
 const tabsTv = tv({
     slots: {
-        base: "rounded-medium",
-        tabList: "rounded-none",
+        base: "",
+        tabList: "",
         tabContent: "",
         tab: "",
         cursor: ""
@@ -21,11 +21,11 @@ const tabsTv = tv({
     variants: {
         variant: {
             variant1: {
-                base: "gradient-border-white-primary rounded-medium p-0.5 overflow-hidden backdrop-blur-sm",
+                base: "",
                 tabList: "gap-4",
-                tabContent: "leading-none",
-                tab: "h-7 px-4",
-                cursor: "bottom-0.5 w-[calc(100%-24px)] bg-gradient-to-r from-white via-secondary to-primary"
+                tabContent: "group-data-[selected=true]:text-background",
+                tab: "",
+                cursor: ""
             },
         },
     },
@@ -35,21 +35,21 @@ const tabsTv = tv({
 })
 
 
-export interface StyledTabsProps extends WithClassNames {
+export interface StyledTabsProps<KeyT=string> extends WithClassNames {
   className?: string;
   tabs: Array<StyledTab>;
-  activeKey: string;
+  activeKey: KeyT;
   onTabChange: (key: Key) => void;
   variant?: "variant1"
 }
 
-export const StyledTabs = ({
+export const StyledTabs = <KeyT=string>({
     className,
     tabs,
     activeKey,
     onTabChange,
     variant = "variant1",
-}: StyledTabsProps) => {
+}: StyledTabsProps<KeyT>) => {
     const { base, tabList, tabContent, tab, cursor } = tabsTv({ variant })
     return (
         <Tabs
@@ -59,14 +59,16 @@ export const StyledTabs = ({
                 tab: tab(),
                 cursor: cursor(),
             }}
+            size="lg"
+            variant="bordered"
             color="primary"
-            variant="underlined"
+            defaultSelectedKey={activeKey as string}
             className={clsx(base(), className)}
-            selectedKey={activeKey}
-            onSelectionChange={(key) => onTabChange(key as Key)}
+            selectedKey={activeKey as string}
+            onSelectionChange={(key) => onTabChange(key as string)}
         >
             {tabs.map((tab) => (
-                <Tab key={tab.key} title={tab.label} />
+                <Tab key={tab.key} value={tab.key} title={tab.label} />
             ))}
         </Tabs>
     )

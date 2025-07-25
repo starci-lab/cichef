@@ -1,8 +1,11 @@
 
 import { configureStore } from "@reduxjs/toolkit"
+import { tabsReducer } from "./slices"
 
 export const store = configureStore({
-    reducer: {},
+    reducer: {
+        tabs: tabsReducer,
+    },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false,
     })

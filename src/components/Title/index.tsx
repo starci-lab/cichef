@@ -3,7 +3,7 @@ import React from "react"
 import clsx from "clsx"
 import { zenDotsFont } from "@/fonts"
 
-export type TitleVariant = "default" | "gradient"
+export type TitleVariant = "default" | "gradient" | "gradient2" | "primary"
 
 export interface TitleProps {
   className?: string
@@ -18,6 +18,7 @@ const titleTv = tv({
             default: "",
             gradient: "bg-gradient-to-r from-white to-primary text-transparent bg-clip-text",
             primary: "text-primary",
+            gradient2: "bg-[linear-gradient(to_right,_white_0%,_theme('colors.secondary')_20%,_theme('colors.primary')_100%)] text-transparent bg-clip-text"
         },
     },
     defaultVariants: {

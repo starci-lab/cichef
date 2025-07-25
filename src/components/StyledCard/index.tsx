@@ -48,12 +48,12 @@ export const cropMap = {
 const cardTv = tv({
     slots: {
         container: "rounded-medium",
-        inner: "",
+        inner: "h-full",
     },
     variants: {
         variant: {
             variant1: {
-                container: "gradient-border-white-primary rounded-medium p-0.5 overflow-hidden backdrop-blur-sm",
+                container: "box-border bg-foreground-500/40 rounded-medium p-0.5 overflow-hidden backdrop-blur-sm",
                 inner: "p-0",
             },
             variant2: {

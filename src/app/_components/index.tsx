@@ -1,3 +1,5 @@
 export * from "./Hero"
 export * from "./Footer"
 export * from "./MarqueeTicker"
+export * from "./Stats"
+export * from "./OurPreviousWork"
