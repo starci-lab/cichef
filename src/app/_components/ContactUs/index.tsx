@@ -57,7 +57,7 @@ export const ContactUs = () => {
             </div>
             <Image src="/coins.png" removeWrapper style={{
                 opacity: 0.4
-            }} className="max-w-[800px] mx-auto px-6 relative -mt-64"/>
+            }} className="max-w-[800px] mx-auto px-6 relative -mt-96"/>
         </div>
     )
 }
