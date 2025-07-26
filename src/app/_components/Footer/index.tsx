@@ -1,35 +1,49 @@
 import React from "react"
+import { Image, Spacer } from "@heroui/react"
+import { MailboxIcon, MapPinLineIcon, PhoneIcon } from "@phosphor-icons/react"
 
+const contactLines = [
+    {
+        key: "phone",
+        icon: <PhoneIcon/>,
+        value: "+84828678897",
+    },
+    {
+        key: "email",
+        icon: <MailboxIcon/>,
+        value: "cuongnvtse160875@gmail.com",
+    },
+    {
+        key: "address",
+        icon: <MapPinLineIcon/>,
+        value: "Ho Chi Minh City, Vietnam",
+    }
+]
 export const Footer = () => {
     return (
-        <div className="min-h-[200vh] relative overflow-hidden">
-            {/* Background aurora gradient */}
-            <div
-                className="absolute inset-0 -z-10"
-                style={{
-                    backgroundImage: `
-                radial-gradient(at 20% 30%, rgba(0,247,230,0.4) 0%, transparent 50%),
-                radial-gradient(at 80% 60%, rgba(0,255,200,0.25) 0%, transparent 50%),
-                radial-gradient(at 50% 90%, rgba(0,255,255,0.2) 0%, transparent 50%),
-                linear-gradient(to bottom, #041c3c, #072f4f)
-              `,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundAttachment: "fixed",
-                    backgroundBlendMode: "screen",
-                }}
-            />
-    
-            {/* Animated blobs (optional) */}
-            <div className="absolute top-[20%] left-[10%] w-[400px] h-[400px] bg-[#00f7e6] opacity-20 blur-3xl rounded-full animate-pulse" />
-            <div className="absolute bottom-[10%] right-[15%] w-[300px] h-[300px] bg-[#00fff7] opacity-15 blur-2xl rounded-full animate-ping" />
-    
-            {/* Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center h-[100vh] text-white text-center px-4">
-                <h1 className="text-5xl font-bold mb-4">Aurora Mesh Hero</h1>
-                <p className="text-lg opacity-80 max-w-xl">
-              Full height, smooth gradient background for landing pages
-                </p>
+        <div className="max-w-[1024px] mx-auto relative">
+            <div className="p-6 rounded-xl">
+                <div className="flex items-center justify-between">
+                    <div className="w-full rounded-xl">
+                        <Image removeWrapper src="/logo-footer.svg" alt="footer" className="h-16 object-cover" />
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <div className="flex flex-col gap-2 text-foreground-500">
+                            {
+                                contactLines.map(({ key, ...rest}) => (
+                                    <div key={key} className="flex items-center gap-2">
+                                        {rest.icon}
+                                        <span>{rest.value}</span>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Spacer y={12}/>
+            <div className="text-center text-foreground-500 text-sm">
+                Copyright ©{new Date().getFullYear()} CICHEF. All Right Reserved
             </div>
         </div>
     )

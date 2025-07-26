@@ -48,17 +48,14 @@ export const cropMap = {
 const cardTv = tv({
     slots: {
         container: "rounded-medium",
-        inner: "h-full",
     },
     variants: {
         variant: {
             variant1: {
                 container: "box-border bg-foreground-500/40 rounded-medium p-0.5 overflow-hidden backdrop-blur-sm",
-                inner: "p-0",
             },
             variant2: {
-                container: "gradient-border-3colors rounded-medium p-0.5 overflow-hidden shadow-lg shadow-white/30",
-                inner: "bg-secondary2/40",
+                container: "overflow-hidden bg-secondary2/40 pt-2 h-full",
             },
         },
     },
@@ -74,24 +71,24 @@ export const StyledCard = ({
     crop = Crop.Pumpkin,
     ...rest
 }: StyledCardProps) => {
-    const { container, inner } = cardTv({ variant })
+    const { container } = cardTv({ variant })
     if (variant === "variant2") {
         return (
             <div className={clsx("relative", className, "preserve-3d transition-all duration-500 hover:rotate-x-30-y-15")}>
-                <div className="absolute top-0 left-1/2 w-full h-full transform -translate-x-1/2 -translate-y-[60%] z-50 flex items-center justify-center">
+                <div className="absolute top-0 left-1/2 w-full h-full transform -translate-x-1/2 -translate-y-[55%] z-50 flex items-center justify-center">
                     <Image removeWrapper src={cropMap[crop].url} alt={cropMap[crop].name} style={{
                         scale: 0.3
                     }} className="w-fit h-fit min-w-fit min-h-fit"/>
                 </div>
                 <Card className={clsx(container())} {...rest}>
-                    <div className={inner()}>{children}</div>
+                    {children}
                 </Card>
             </div>
         )
     }
     return (
         <Card className={clsx(container(), className, "transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-white/30")} {...rest}>
-            <div className={inner()}>{children}</div>
+            {children}
         </Card>
     )
 }

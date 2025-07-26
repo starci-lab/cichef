@@ -79,7 +79,6 @@ interface ProcessStepCard extends WithClassNames<ProcessStepCardClassNames> {
   title: string;
   subTitle: string;
   descriptions: Array<{ key: string; value: string }>;
-  image: string;
   index?: string;
   leftToRight?: boolean; // default is true
   chef?: Chef;
@@ -110,14 +109,16 @@ export const ProcessStepCard = ({
                     "flex gap-12 items-stretch",
                     "bg-gradient-to-r p-6",
                     {
-                        "rounded-r-full pr-32 from-primaryFrom/0 to-primary2/50": leftToRight,
-                        "rounded-l-full pl-32 from-primary2/50 to-primaryFrom/0": !leftToRight,
+                        "rounded-r-full pr-16 from-primaryFrom/0 to-primary2/50": leftToRight,
+                        "rounded-l-full pl-16 from-primary2/50 to-primaryFrom/0": !leftToRight,
                         "flex-row-reverse": !leftToRight,
                         "!rounded-none !p-6 w-full !gap-6 !items-end": isMobile,
                     }
                 )}
             >
-                <div className="flex gap-6 items-stretch items-center flex-1">
+                <div className={clsx(
+                    "flex gap-6 items-stretch items-center flex-1 sm:w-[400px]"
+                )}>
                     <div className={clsx(classNames?.divider, dividerMap[divider].className, "w-2")}></div>
                     <div className="flex flex-col justify-center">
                         <div
@@ -156,7 +157,7 @@ export const ProcessStepCard = ({
                         classNames?.imageWrapper, 
                         "relative",
                         "w-[160px] h-[120px]",
-                        "sm:w-[400px] sm:h-[300px]",
+                        "sm:w-[320px] sm:h-[240px]",
                     )}
                     animate={{
                         y: [0, -5, 0], // bounce
@@ -180,7 +181,7 @@ export const ProcessStepCard = ({
                             "origin-[50%_100%]"
                         )}
                         style={{ 
-                            transform: isMobile ? "translateX(-50%) scale(0.4)" : "translateX(-50%)"
+                            transform: isMobile ? "translateX(-50%) scale(0.4)" : "translateX(-50%) scale(0.8)"
                         }}
                     />
                 </motion.div>
